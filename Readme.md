@@ -5,8 +5,11 @@ This page refreshes itself at a hardcoded interval. It loads a page in an iframe
 ## Making it work
 
 The page has three values to be customized:
+
 1. The frame source
+
 2. The refresh delay
+
 3. The scroll offset
 
 Change them according to the needs of a particular CTF
@@ -15,7 +18,7 @@ Change them according to the needs of a particular CTF
 
 Some pages disallow embedding them in iframes, such as the one currently embedded in the page.
 
-```javascript
+```
 ERROR: Refused to display 'example.com/scoreboard' in a frame because it set 'X-Frame-Options' to 'DENY'.
 ```
 
@@ -25,7 +28,7 @@ Some browsers have add-ons that disable this functionality, like [Firefox](https
 
 Also, scrolling in an iframe is also disabled as a security feature. 
 
-```javascript
+```
 ERROR: Blocked a frame with origin "null" from accessing a cross-origin frame.
 ```
 
