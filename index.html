@@ -39,13 +39,21 @@
 			<h1 id="title">Refreshing in 120 seconds</h1>
 		</header>
 		<section id="wrapper">
-			<iframe src="http://ctf.nullcon.net/scoreboard.php" frameborder="0"></iframe>
+		
+			<!-- ######################### -->
+			<!-- ## Change the URL here ## -->
+			<!-- ######################### -->
+			<iframe src="http://ctf.nullcon.net/scoreboard.php" id="frame" frameborder="0" onload="scrollDown();"></iframe>
 		</section>
 		<script>
+
+				 // ################################### //
+				 // ## Change the time interval here ## //
+				 // ################################### //
+
 			async function reload() {
 				var refreshDelay = 120;
 				for (i = 0; i < refreshDelay; i++) {
-					console.log(i);
 					document.getElementById("title").innerText = "Refreshing in " + (refreshDelay - i) +" seconds";
 					await sleep(1000);
 				}
@@ -58,6 +66,16 @@
 			}
 
 			reload();
+
+			function scrollDown() {
+				 var iframe = document.getElementById("frame");
+
+				 // #################################### //
+				 // ## Change the y-scroll value here ## //
+				 // #################################### //
+
+				 iframe.contentWindow.scrollTo(0,300);
+			}
 		</script>
 	</body>
 </html>
