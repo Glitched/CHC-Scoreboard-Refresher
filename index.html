@@ -1,3 +1,4 @@
+<!DOCTYPE html>
 <html>
 	<head>
 		<title>CHC Scoreboard</title>
@@ -49,10 +50,11 @@
 			}
 		</style>
 		<meta name="robots" content="noindex">
+		<meta charset="UTF-8"> 
 	</head>
 	<body>
 		<header>
-			<h1 id="title">Enable Javascript to use</h1>
+			<h1 id="title">Javascript Error</h1>
 		</header>
 		<section id="wrapper">
 			<!-- ######################### -->
@@ -62,12 +64,10 @@
 			<span>Have you read the <a href="https://github.com/Glitched/CHC-Scoreboard-Refresher/blob/master/Readme.md">Readme?</a></span>
 		</section>
 		<script>
-
-				 // ################################### //
-				 // ## Change the time interval here ## //
-				 // ################################### //
-
 			async function reload() {
+				// ################################### //
+				// ## Change the time interval here ## //
+				// ################################### //
 				var refreshDelay = 120;
 				for (i = 0; i < refreshDelay; i++) {
 					if ((refreshDelay - i) % 60 < 10) {
@@ -87,13 +87,10 @@
 			reload();
 
 			function scrollDown() {
-				 var iframe = document.getElementById("frame");
-
-				 // #################################### //
-				 // ## Change the y-scroll value here ## //
-				 // #################################### //
-
-				 iframe.contentWindow.scrollTo(0,300);
+				// #################################### //
+				// ## Change the y-scroll value here ## //
+				// #################################### //
+				document.getElementById("frame").contentWindow.scrollTo(0,300);
 			}
 		</script>
 	</body>

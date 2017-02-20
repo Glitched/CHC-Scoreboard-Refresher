@@ -33,3 +33,7 @@ ERROR: Blocked a frame with origin "null" from accessing a cross-origin frame.
 ```
 
 You can disable this security feature by launching Chrome with the flag `--disable-web-security`. Again, this is a very bad idea if you use this browser for anything other than this. Do not do it. I have not tried it, but [this Firefox add-on](https://addons.mozilla.org/en-Us/firefox/addon/cors-everywhere/) should accomplish the same task.
+
+### Firefox users:
+
+This uses Javascript that has not been implemented until Firefox 52 beta. Please make sure you are using that version to use this site.
