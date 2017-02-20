@@ -52,7 +52,7 @@
 	</head>
 	<body>
 		<header>
-			<h1 id="title">Refreshing in 120 seconds</h1>
+			<h1 id="title">Enable Javascript to use</h1>
 		</header>
 		<section id="wrapper">
 			<!-- ######################### -->
@@ -70,11 +70,14 @@
 			async function reload() {
 				var refreshDelay = 120;
 				for (i = 0; i < refreshDelay; i++) {
-					document.getElementById("title").innerText = "Refreshing in " + (refreshDelay - i) +" seconds";
+					if ((refreshDelay - i) % 60 < 10) {
+						document.getElementById("title").innerText = "Refreshing in " + Math.floor((refreshDelay - i)/60) + ":0" + (refreshDelay - i) % 60;
+					} else {
+						document.getElementById("title").innerText = "Refreshing in " + Math.floor((refreshDelay - i)/60) + ":" + (refreshDelay - i) % 60;
+					}
 					await sleep(1000);
 				}
 				location.reload();
-				alert("Pause!");
 			}
 
 			function sleep(ms) {
